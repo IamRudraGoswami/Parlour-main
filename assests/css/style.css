@@ -623,6 +623,10 @@ a{
         top: 0%;
         /* border: 3px solid green; */
     }
+   .about__descripion p {
+        font-size: 2.5em;
+        line-height: normal;
+    }
     .services__content__descripion{
         grid-template-columns: repeat(4, 1fr);
     }
