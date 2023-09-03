@@ -1,28 +1,28 @@
 /*------------ SHOW MENU-------------*/
-const showMneu = (toggleId, navId) => {
+const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
         nav = document.getElementById(navId)
-    /*valida se se existe as variaveis*/
+    /* Check if the variables exist */
     if (toggle && nav) {
-        /*aqui adiciono a class show-menu na div com a class nav__menu*/
+        /* Add the show-menu class to the div with the class nav__menu here */
         toggle.addEventListener('click', () => {
-            /*adicina a class show-menu na div que tem o id nav-menu */
+            /* Add the show-menu class to the div with the id nav-menu */
             nav.classList.toggle('show-menu')
         })
     }
 }
-showMneu('nav-toggle', 'nav')
+showMenu('nav-toggle', 'nav')
 
-/*------------ REMOVER MENU MOBILE -------------*/
+/*------------ REMOVE MOBILE MENU -------------*/
 const navLink = document.querySelectorAll('.nav__link')
 function linkAction() {
     const navMenu = document.getElementById('nav')
-    /*Quando um link ou o botão close for clicado a class show-menu será removido*/
+    /* When a link or the close button is clicked, remove the show-menu class */
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*==================== DEIXA O LINK CLICADO COM A CLASS ACTIVE-LINK ====================*/
+/*==================== SET CLICKED LINK TO ACTIVE-LINK CLASS ====================*/
 const linkColor = document.querySelectorAll('.nav__link')
 
 function colorLink(){
@@ -33,7 +33,7 @@ function colorLink(){
 }
 
 linkColor.forEach(L=> L.addEventListener('click', colorLink))
-/*==================== MUDAR A COR DO HEADER ====================*/
+/*==================== CHANGE HEADER COLOR ====================*/
 function scrollHeader(){
     const scrollHeader = document.getElementById('header')
     if(this.scrollY >= 100) scrollHeader.classList.add('scroll-header'); else scrollHeader.classList.remove('scroll-header')
